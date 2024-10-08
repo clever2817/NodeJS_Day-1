@@ -24,14 +24,22 @@
 
 /// REST Parameter
 
-function summation(...numbers) {
-  let sum = 0;
+// function summation(...numbers) {
+//   let sum = 0;
 
-  for (let num of numbers) {
-    sum += num;
-  }
+//   for (let num of numbers) {
+//     sum += num;
+//   }
 
-  console.log(sum);
-}
+//   console.log(sum);
+// }
 
-summation(1, 2, 3, 4, 5);
+// summation(1, 2, 3, 4, 5);
+
+/// Dynamic Function
+
+let name = function (myName) {
+  return myName;
+};
+
+console.log(name("Abir"));
