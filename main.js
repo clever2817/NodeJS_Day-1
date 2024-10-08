@@ -10,14 +10,28 @@
 
 /// Array Push and Unshift
 
-let poorCountry = ["Bangladesh", "Srilanka"];
+// let poorCountry = ["Bangladesh", "Srilanka"];
 
-let richCountry = ["America", "Canada", "Italy"];
+// let richCountry = ["America", "Canada", "Italy"];
 
-poorCountry.push(richCountry);
+// poorCountry.push(richCountry);
 
-richCountry.unshift(poorCountry);
+// richCountry.unshift(poorCountry);
 
-console.log(richCountry);
+// console.log(richCountry);
 
-console.log(poorCountry);
+// console.log(poorCountry);
+
+/// REST Parameter
+
+function summation(...numbers) {
+  let sum = 0;
+
+  for (let num of numbers) {
+    sum += num;
+  }
+
+  console.log(sum);
+}
+
+summation(1, 2, 3, 4, 5);
