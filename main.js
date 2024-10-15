@@ -38,8 +38,34 @@
 
 /// Dynamic Function
 
-let name = function (myName) {
-  return myName;
-};
+// let name = function (myName) {
+//   return myName;
+// };
 
-console.log(name("Abir"));
+// console.log(name("Abir"));
+
+/// NodeJS Sever Creation
+
+let http = require("http");
+
+let server = http.createServer(function (req, res) {
+  if (req.url == "/") {
+    res.end("Home Page");
+  }
+
+  if (req.url == "/about") {
+    res.end("About Page");
+  }
+
+  if (req.url == "/contact") {
+    res.end("Contact Page");
+  }
+
+  if (req.url == "/profile") {
+    res.end("Profile Page");
+  }
+});
+
+server.listen(7070, function () {
+  console.log("Server Running on Port 7070...");
+});

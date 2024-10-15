@@ -1,0 +1,20 @@
+{
+  "name": "nodejs_day-1",
+  "version": "1.0.0",
+  "description": "NodeJS_Day-1",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clever2817/NodeJS_Day-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clever2817/NodeJS_Day-1/issues"
+  },
+  "homepage": "https://github.com/clever2817/NodeJS_Day-1#readme"
+}
