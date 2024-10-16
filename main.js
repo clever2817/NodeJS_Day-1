@@ -76,25 +76,25 @@ const fs = require("fs");
 
 // File Read
 
-async function readFile() {
-  try {
-    const data = await fs.readFileSync("README.md", "utf8");
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-// // Create New File
-
-// async function createNewFile() {
+// async function readFile() {
 //   try {
-//     await fs.writeFileSync("NewFile.txt", "Hello World!");
-//     console.log("New File Created");
+//     const data = await fs.readFileSync("README.md", "utf8");
+//     console.log(data);
 //   } catch (error) {
 //     console.log(error);
 //   }
 // }
+
+// Create New File
+
+async function createNewFile() {
+  try {
+    await fs.writeFileSync("NewFile.txt", "Hello World!");
+    console.log("New File Created");
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // // File Content Append
 
@@ -122,6 +122,6 @@ async function readFile() {
 // }
 
 //Function Calling
-readFile();
-// createNewFile();
+// readFile();
+createNewFile();
 // appendContent();
