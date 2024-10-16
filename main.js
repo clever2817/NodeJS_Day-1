@@ -109,10 +109,21 @@ const fs = require("fs");
 
 // Rename File
 
-async function fileRename() {
+// async function fileRename() {
+//   try {
+//     await fs.renameSync("NewFile.txt", "UltraNewFile.txt");
+//     console.log("File Rename Completed");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// File Delete
+
+async function deleteFile() {
   try {
-    await fs.renameSync("NewFile.txt", "UltraNewFile.txt");
-    console.log("File Rename Completed");
+    await fs.unlinkSync("UltraNewFile.txt");
+    console.log("File Deletion Successful");
   } catch (error) {
     console.log(error);
   }
@@ -122,4 +133,5 @@ async function fileRename() {
 // readFile();
 // createNewFile();
 // appendContent();
-fileRename();
+// fileRename();
+deleteFile();
