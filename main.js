@@ -46,26 +46,82 @@
 
 /// NodeJS Sever Creation
 
-let http = require("http");
+// let http = require("http");
 
-let server = http.createServer(function (req, res) {
-  if (req.url == "/") {
-    res.end("Home Page");
+// let server = http.createServer(function (req, res) {
+//   if (req.url == "/") {
+//     res.end("Home Page");
+//   }
+
+//   if (req.url == "/about") {
+//     res.end("About Page");
+//   }
+
+//   if (req.url == "/contact") {
+//     res.end("Contact Page");
+//   }
+
+//   if (req.url == "/profile") {
+//     res.end("Profile Page");
+//   }
+// });
+
+// server.listen(7070, function () {
+//   console.log("Server Running on Port 7070...");
+// });
+
+/// File System
+
+const fs = require("fs");
+
+// File Read
+
+async function readFile() {
+  try {
+    const data = await fs.readFileSync("README.md", "utf8");
+    console.log(data);
+  } catch (error) {
+    console.log(error);
   }
+}
 
-  if (req.url == "/about") {
-    res.end("About Page");
-  }
+// // Create New File
 
-  if (req.url == "/contact") {
-    res.end("Contact Page");
-  }
+// async function createNewFile() {
+//   try {
+//     await fs.writeFileSync("NewFile.txt", "Hello World!");
+//     console.log("New File Created");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-  if (req.url == "/profile") {
-    res.end("Profile Page");
-  }
-});
+// // File Content Append
 
-server.listen(7070, function () {
-  console.log("Server Running on Port 7070...");
-});
+// async function appendContent() {
+//   try {
+//     await fs.appendFileSync("NewFile.txt", "\nHello Programming World");
+//     console.log("Content Successfully Appended");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// // Rename File
+
+// async function fileRename()
+// {
+//   try
+//   {
+//     await fs.
+//   }
+
+//   catch (error){
+//     console.log(error);
+//   }
+// }
+
+//Function Calling
+readFile();
+// createNewFile();
+// appendContent();
