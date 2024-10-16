@@ -87,25 +87,25 @@ const fs = require("fs");
 
 // Create New File
 
-async function createNewFile() {
-  try {
-    await fs.writeFileSync("NewFile.txt", "Hello World!");
-    console.log("New File Created");
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-// // File Content Append
-
-// async function appendContent() {
+// async function createNewFile() {
 //   try {
-//     await fs.appendFileSync("NewFile.txt", "\nHello Programming World");
-//     console.log("Content Successfully Appended");
+//     await fs.writeFileSync("NewFile.txt", "Hello World!");
+//     console.log("New File Created");
 //   } catch (error) {
 //     console.log(error);
 //   }
 // }
+
+// File Content Append
+
+async function appendContent() {
+  try {
+    await fs.appendFileSync("NewFile.txt", "\nHello Programming World");
+    console.log("Content Successfully Appended");
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // // Rename File
 
@@ -123,5 +123,5 @@ async function createNewFile() {
 
 //Function Calling
 // readFile();
-createNewFile();
-// appendContent();
+// createNewFile();
+appendContent();
