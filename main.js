@@ -98,30 +98,28 @@ const fs = require("fs");
 
 // File Content Append
 
-async function appendContent() {
+// async function appendContent() {
+//   try {
+//     await fs.appendFileSync("NewFile.txt", "\nHello Programming World");
+//     console.log("Content Successfully Appended");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// Rename File
+
+async function fileRename() {
   try {
-    await fs.appendFileSync("NewFile.txt", "\nHello Programming World");
-    console.log("Content Successfully Appended");
+    await fs.renameSync("NewFile.txt", "UltraNewFile.txt");
+    console.log("File Rename Completed");
   } catch (error) {
     console.log(error);
   }
 }
 
-// // Rename File
-
-// async function fileRename()
-// {
-//   try
-//   {
-//     await fs.
-//   }
-
-//   catch (error){
-//     console.log(error);
-//   }
-// }
-
 //Function Calling
 // readFile();
 // createNewFile();
-appendContent();
+// appendContent();
+fileRename();
